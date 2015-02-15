@@ -1,6 +1,6 @@
 {
   "name": "cn-search",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Redis search for node.js,support chinese",
   "keywords": [
     "redis",
