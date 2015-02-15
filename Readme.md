@@ -49,26 +49,27 @@ Please check [the official install document](http://www.coreseek.cn/products-ins
 
 ###usage
 
-var search = searcher.createSearch('pets');
-
-var strs = [];
-strs.push('Tobi wants four dollars');
-strs.push('Mustachio is a cat');
-strs.push('这是一个支持中文的搜索引擎，hello man');
-
-strs.forEach(function(str, i){ search.index(str, i); });
-
-
-search
-  .query(query = '支持 hello')
-  .end(function(err, ids){
-    if (err) throw err;
-    console.log('Search results for "%s":', query);
-    ids.forEach(function(id){
-      console.log('  - %s', strs[id]);
-    });
-    //process.exit();
-  });
+	var searcher=require('cn-search');
+	var search = searcher.createSearch('pets');
+	
+	var strs = [];
+	strs.push('Tobi wants four dollars');
+	strs.push('Mustachio is a cat');
+	strs.push('这是一个支持中文的搜索引擎，hello man');
+	
+	strs.forEach(function(str, i){ search.index(str, i); });
+	
+	
+	search
+	  .query(query = '支持 hello')
+	  .end(function(err, ids){
+	    if (err) throw err;
+	    console.log('Search results for "%s":', query);
+	    ids.forEach(function(id){
+	      console.log('  - %s', strs[id]);
+	    });
+	    //process.exit();
+	  });
 	  
 ======================below is reds下面是reds的用法==========================
 
