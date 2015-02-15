@@ -9,7 +9,6 @@
 
 var searcher=require('../index');
 
-searcher.setRedisServer('192.168.1.200', 6379);
 var search = searcher.createSearch('pets');
 
 var strs = [];
@@ -26,10 +25,10 @@ strs.forEach(function(str, i){ search.index(str, i); });
 
 
 search
-  .query(query = 'Tobi dollars')
+  .query(query1= 'Tobi dollars')
   .end(function(err, ids){
     if (err) throw err;
-    console.log('Search results for "%s":', query);
+    console.log('Search results for "%s":', query1);
     ids.forEach(function(id){
       console.log('  - %s', strs[id]);
     });
@@ -37,10 +36,10 @@ search
   });
 
 search
-  .query(query = '支持 hello')
+  .query(query2 = '支持 hello')
   .end(function(err, ids){
     if (err) throw err;
-    console.log('Search results for "%s":', query);
+    console.log('Search results for "%s":', query2);
     ids.forEach(function(id){
       console.log('  - %s', strs[id]);
     });
