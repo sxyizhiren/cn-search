@@ -12,16 +12,15 @@
   ],
   "author": "yizhiren <786647787@qq.com>",
   "dependencies": {
-    "natural": "^0.2.0",
-    "redis": "^0.12.1",
-    "mmseg": "^0.2.0"
+    "natural": "~0.2.0",
+    "redis": "~0.12.1",
+    "mmseg": "~0.2.0"
   },
   "devDependencies": {
-    "natural": "^0.2.0",
-    "matcha": "^0.6.0",
-    "should": "^3.3.2",
-    "redis-js":"^0.0.11",
-    "segment":"^0.0.5"
+    "matcha": "~0.6.0",
+    "should": "~3.3.2",
+    "redis-js":"~0.0.12",
+    "segment":"~0.0.5"
   },
   "main": "index",
   "repository": {
