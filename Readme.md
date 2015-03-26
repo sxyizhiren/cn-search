@@ -1,3 +1,4 @@
+[![Build Status](https://api.travis-ci.org/sxyizhiren/cn-search.svg?branch=master)](http://travis-ci.org/sxyizhiren/cn-search)
 # cn-search
 
   ch-search based on reds and mmseg,now support chinese.
