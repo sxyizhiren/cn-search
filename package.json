@@ -1,6 +1,6 @@
 {
   "name": "cn-search",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Redis search for node.js,support chinese",
   "keywords": [
     "redis",
@@ -17,9 +17,11 @@
     "mmseg": "^0.2.0"
   },
   "devDependencies": {
+    "natural": "^0.2.0",
     "matcha": "^0.6.0",
     "should": "^3.3.2",
-    "superagent": "^0.21.0"
+    "redis-js":"^0.0.11",
+    "segment":"^0.0.5"
   },
   "main": "index",
   "repository": {
