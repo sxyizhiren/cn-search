@@ -1,6 +1,6 @@
 {
   "name": "cn-search",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Redis search for node.js,support chinese",
   "keywords": [
     "redis",
@@ -21,6 +21,9 @@
     "should": "~3.3.2",
     "redis-js-fork":"~0.0.12",
     "segment":"~0.0.5"
+  },
+  "scripts": {
+    "test": "node test/pureEng.js && node test/Chinese.js"
   },
   "main": "index",
   "repository": {
