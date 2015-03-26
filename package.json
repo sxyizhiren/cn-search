@@ -19,7 +19,7 @@
   "devDependencies": {
     "matcha": "~0.6.0",
     "should": "~3.3.2",
-    "redis-js":"~0.0.12",
+    "redis-js-fork":"~0.0.12",
     "segment":"~0.0.5"
   },
   "main": "index",

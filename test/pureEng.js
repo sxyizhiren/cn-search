@@ -5,25 +5,10 @@
 
 var reds = require('../');
 var should = require('should');
-var db = require('redis-js');
+//redis take 64ms,  and mock take 191ms
 
-var option={};
-option.redis=db;
-
-var Segment = require('segment').Segment;
-var segment = new Segment();
-segment.useDefault();
-option.segmentSync = function(str){
-    //console.log('Str,',str);
-    var words=segment.doSegment(str);
-    var result=[];
-    for(var i= 0,len=words.length;i<len;i++){
-        result.push(words[i].w);
-    }
-
-    //console.log(result);
-    return result;
-}
+var db = require('./optionForTest').db;
+var option = require('./optionForTest').option;
 
 var search = reds.createSearch('reds',option);
 
