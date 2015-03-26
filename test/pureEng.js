@@ -89,9 +89,9 @@ function test() {
     .end(function(err, ids){
       if (err) throw err;
       ids.should.have.length(3);
-      ids.should.include('0');
-      ids.should.include('3');
-      ids.should.include('5');
+      ids.should.containEql('0');
+      ids.should.containEql('3');
+      ids.should.containEql('5');
       --pending || done();
     });
 
@@ -101,9 +101,9 @@ function test() {
     .end(function(err, ids){
       if (err) throw err;
       ids.should.have.length(3);
-      ids.should.include('0');
-      ids.should.include('3');
-      ids.should.include('5');
+      ids.should.containEql('0');
+      ids.should.containEql('3');
+      ids.should.containEql('5');
       --pending || done();
     });
 
@@ -132,8 +132,8 @@ function test() {
     .end(function(err, ids){
       if (err) throw err;
       ids.should.have.length(2);
-      ids.should.include('2');
-      ids.should.include('4');
+      ids.should.containEql('2');
+      ids.should.containEql('4');
       --pending || done();
     });
 
@@ -144,8 +144,8 @@ function test() {
     .end(function(err, ids){
       if (err) throw err;
       ids.should.have.length(2);
-      ids.should.include('2');
-      ids.should.include('4');
+      ids.should.containEql('2');
+      ids.should.containEql('4');
       --pending || done();
     });
 
@@ -182,8 +182,8 @@ function test() {
     .end(function(err, ids){
       if (err) throw err;
       ids.should.have.length(2);
-      ids.should.include('7');
-      ids.should.include('9');
+      ids.should.containEql('7');
+      ids.should.containEql('9');
       ids[0].should.eql('7');
       ids[1].should.eql('9');
       --pending || done();
@@ -196,9 +196,9 @@ function test() {
     .end(function(err, ids){
       if (err) throw err;
       ids.should.have.length(3);
-      ids.should.include('7');
-      ids.should.include('8');
-      ids.should.include('9');
+      ids.should.containEql('7');
+      ids.should.containEql('8');
+      ids.should.containEql('9');
       ids[0].should.eql('9');
       --pending || done();
     });
