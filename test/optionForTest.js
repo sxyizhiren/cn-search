@@ -1,5 +1,5 @@
 
-var db = require('redis-js-fork');
+var db = require('redis-js');
 
 var option={};
 option.redis=db;
