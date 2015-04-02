@@ -7,7 +7,7 @@ sudo: false
 install:
   - "npm install matcha"
   - "npm install should"
-  - "npm install redis-js-fork"
+  - "npm install redis-js"
   - "npm install segment"
   - "npm install natural"
 script: npm test
