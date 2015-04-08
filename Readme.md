@@ -1,5 +1,8 @@
-[![Build Status](https://api.travis-ci.org/sxyizhiren/cn-search.svg?branch=master)](http://travis-ci.org/sxyizhiren/cn-search)
 # cn-search
+- [![NPM version](https://badge.fury.io/js/cn-search.png)](http://badge.fury.io/js/cn-search)
+- [![Dependencies Status](https://david-dm.org/sxyizhiren/cn-search.png)](https://david-dm.org/sxyizhiren/cn-search)
+- [![Build Status](https://travis-ci.org/sxyizhiren/cn-search.png?branch=master)](https://travis-ci.org/sxyizhiren/cn-search)
+- [![Coverage Status](https://coveralls.io/repos/sxyizhiren/cn-search/badge.png)](https://coveralls.io/r/sxyizhiren/cn-search)
 
   ch-search based on reds and mmseg,now support chinese.
   

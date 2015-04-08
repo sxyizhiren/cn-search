@@ -17,13 +17,16 @@
     "mmseg": "~0.2.0"
   },
   "devDependencies": {
+    "coveralls": "^2.11.2",
     "matcha": "~0.6.0",
+    "mocha-lcov-reporter": "0.0.2",
+    "redis-js": "~0.0.12-1",
+    "segment": "~0.0.5",
     "should": "~5.2.0",
-    "redis-js":"~0.0.12-1",
-    "segment":"~0.0.5"
+    "istanbul": "^0.3.13"
   },
   "scripts": {
-    "test": "node test/pureEng.js && node test/Chinese.js"
+    "test": "make test-all"
   },
   "main": "index",
   "repository": {
