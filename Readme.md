@@ -6,51 +6,17 @@
 - [![NPM Stats](https://nodei.co/npm/cn-search.png?downloads=true&stars=true)](https://npmjs.org/package/cn-search)
 - [![NPM Downloads](https://nodei.co/npm-dl/cn-search.png?months=9)](https://npmjs.org/package/cn-search)
 
-  ch-search based on reds and mmseg,now support chinese.
-  
-  支持中文的搜索引擎，基于reds和mmseg:
+  ch-search , a light-weight chinese search engine based on reds, english support also.
 
   https://github.com/tj/reds
-
-  https://github.com/zzdhidden/mmseg-node 
     
   
 ## Installation
 
       $ npm install cn-search
 
-  make sure you have already installed mmseg , if not, you could follow step below:
-
-## Install libmmseg
-
-###libmmseg on ubuntu
-
-	apt-get install make gcc g++ automake libtool
-	wget http://www.coreseek.cn/uploads/csft/3.2/mmseg-3.2.14.tar.gz
-	tar zxvf mmseg-3.2.14.tar.gz 
-	cd mmseg-3.2.14
-	./bootstrap 
-	./configure
-	make && make install
-	#Install libmmseg on ubuntu
-
-###libmmseg on mac os
-
-	sudo port install autoconf263 libtool-devel m4 autoconf automake libtool
-	wget http://www.coreseek.cn/uploads/csft/3.2/mmseg-3.2.14.tar.gz
-	tar zxvf mmseg-3.2.14.tar.gz 
-	cd mmseg-3.2.14
-	aclocal &&  glibtoolize --copy --force --ltdl && autoreconf -i -f && automake --a && ./configure  && make && sudo make install
-
-###Other system
-
-Please check [the official install document](http://www.coreseek.cn/products-install/)
-
-
 ## Example
 
-  用法和reds相同
-  
   the same to reds
 
 ###usage
@@ -74,11 +40,10 @@ search
     ids.forEach(function(id){
       console.log('  - %s', strs[id]);
     });
-    //process.exit();
 });
 ```
 	  
-======================below is reds下面是reds的用法==========================
+======================below is reds's README ==========================
 
 # reds
 
