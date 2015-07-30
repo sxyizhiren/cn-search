@@ -11,7 +11,7 @@ var searcher=require('../index');
 var should = require('should');
 //redis take 46ms,  and mock take 61ms
 
-var option = require('./optionForTest').option;
+var option = require('./optionForTest.jsx').option;
 var search = searcher.createSearch('pets',option);
 
 var start = new Date;
@@ -32,43 +32,42 @@ strs.push('Redis是一个开源的使用ANSI C语言编写、支持网络、可�
 
 strs.forEach(function(str, i){ search.index(str, i); });
 
-var pending = 0;
-
-++pending;
-search
-  .query('Tobi dollars')
-  .end(function(err, ids){
-    if (err) throw err;
-    ids.should.have.length(1);
-    ids[0].should.eql('0');
-    --pending || done();
-  });
-
-++pending;
-search
-  .query('搜索')
-  .end(function(err, ids){
-    if (err) throw err;
-    ids.should.have.length(2);
-    ids[0].should.eql('10');
-    --pending || done();
-  });
-
-++pending;
-search
-    .query('中文 数据库 ')
-    .type('or')
-    .end(function(err, ids){
-        if (err) throw err;
-        ids.should.have.length(2);
-        ids[0].should.eql('7');
-        ids[1].should.eql('11');
-        --pending || done();
+describe("[ Chinese Word Search ]", function() {
+	it("query two word one time.", function(done) {
+        search
+          .query('Tobi dollars')
+          .end(function(err, ids){
+            if (err) throw err;
+            ids.should.have.length(1);
+            ids[0].should.eql('0');
+            done();
+          });   
+    
     });
+    it("query one chinese word.", function(done) {
+        search
+          .query('搜索')
+          .end(function(err, ids){
+            if (err) throw err;
+            ids.should.have.length(2);
+            ids[0].should.eql('10');
+            done();
+          });  
+    
+    });
+    
+    it("query two chinese words.", function(done) {
+        search
+            .query('中文 数据库 ')
+            .type('or')
+            .end(function(err, ids){
+                if (err) throw err;
+                ids.should.have.length(2);
+                ids[0].should.eql('7');
+                ids[1].should.eql('11');
+                done();
+            });
 
-function done() {
-    console.log();
-    console.log('  tests completed in %dms', new Date - start);
-    console.log();
-    process.exit();
-}
+    });
+});
+
