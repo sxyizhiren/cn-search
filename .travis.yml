@@ -6,4 +6,4 @@ node_js:
 sudo: false
 install:
   - "npm install"
-script: make test
+script: make test-all
