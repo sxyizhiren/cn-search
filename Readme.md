@@ -49,9 +49,9 @@ search
 	.type('or')
 	.end(function(err, ids){
 		if (err) throw err;
-			console.log('Search results for "%s":', query);
-			ids.forEach(function(id){
-			  console.log('  - %s', strs[id]);
+		console.log('Search results for "%s":', query);
+		ids.forEach(function(id){
+		  console.log('  - %s', strs[id]);
 		});
 	});
 
