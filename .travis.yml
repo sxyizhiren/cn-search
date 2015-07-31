@@ -5,12 +5,5 @@ node_js:
   - "0.10"
 sudo: false
 install:
-  - "npm install mocha"
-  - "npm install should"
-  - "npm install redis-js"
-  - "npm install segment"
-  - "npm install natural"
-  - "npm install coveralls"
-  - "npm install mocha-lcov-reporter"
-  - "npm install istanbul"
+  - "npm install"
 script: make test
